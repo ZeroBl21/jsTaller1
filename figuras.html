@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Figuras Geométricas | Curso Practico de JavaScript</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/normalize.css">
+
+    </head>
+    <body>
+        <header>
+            <h1>Figuras Geométricas</h1>
+        </header>
+
+        <main>
+            <section class="form-container">
+                <div class="form-header"></div>
+                <div class="form-main">
+
+                    <h2>¡Vamos a calcular un Cuadrado!</h2>
+                    <p>Ingrese los datos requeridos en el formulario de debajo</p>
+                    
+                    <form action="">
+
+                        <label for="InputCuadrado">
+                            Escribe cuanto mide cada lado del cuadrado
+                        </label>
+                        
+                        <input id="InputCuadrado" type="number">
+                        
+                        <button type="button" onclick="calcularPerimetroCuadrado()">
+                            Calcular Perímetro
+                        </button>
+                        
+                        <button type="button" onclick="calcularAreaCuadrado()">
+                            Calcular el área
+                        </button>
+
+                    </form> 
+                </div>
+                <div class="form-image"></div>
+            </section>
+        </main>
+
+        <script src="figuras.js"></script>
+    </body>
+</html> 
