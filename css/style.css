@@ -130,12 +130,27 @@ main{
     background: var(--Background-Blue);
     padding: 0 0 20px;
     border-radius: 1rem;
+    box-shadow: 0px 10px 51px 5px rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(150, 150, 150, 0.2);
+}
+
+.wrapper .form-container::before{
+    content: "";
+    width: 100%;
+    height: 90%;
+    opacity: .5;
+    position: absolute;
+    z-index: -1;
+    filter: blur(249em);
+    background: radial-gradient(circle, rgba(13,45,140,1) 0%, rgba(22, 6, 44, 0.2) 100%);
 }
 
 .form-container .form-main{
     display: flex;
     text-align: center;
     flex-wrap: wrap-reverse;
+    overflow: hidden;
+    width: 100%;
 }
 
 .form-main form{
@@ -150,6 +165,12 @@ main{
 
 .form-main form .form-title, .form-main form .form-subtitle{
     padding: 20px;
+}
+
+.form-container .form-main form .form-buttons{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,200px);
 }
 
 .form-main form .form-label{
