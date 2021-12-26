@@ -41,9 +41,14 @@ function calcularCuadrado(){
     const area = areaCuadrado(value);
     const perimetro = perimetroCuadrado(value);
 
+    if(value <= 0){
+        aResult.innerHTML = "Error ";
+        pResult.innerHTML = "Error ";
+    }else{
+        aResult.innerHTML = area.toFixed(4);
+        pResult.innerHTML = perimetro.toFixed(4);
+    }
 
-    aResult.innerHTML = area;
-    pResult.innerHTML = perimetro;
 }
 
 function calcularCirculo(){
@@ -54,9 +59,15 @@ function calcularCirculo(){
     const area = areaCirculo(value);
     const perimetro = perimetroCirculo(value);
 
-
-    aResult.innerHTML = area.toFixed(4);
-    pResult.innerHTML = perimetro.toFixed(4);
+    if(value <= 0){
+        input.ariaPlaceholder("Inserte Numero")
+        aResult.innerHTML = "Error ";
+        pResult.innerHTML = "Error ";
+    }else{
+        aResult.innerHTML = area.toFixed(4);
+        pResult.innerHTML = perimetro.toFixed(4);
+    }
+    
 }
 
 function calcularTriangulo(){
@@ -64,14 +75,19 @@ function calcularTriangulo(){
     const height = Number(document.getElementById("InputHeight").value);
     const sideA = Number(document.getElementById("InputA").value);
     const sideB = Number(document.getElementById("InputB").value);
-
+    
     const aResult = document.getElementById("AreaResultado");
     const pResult = document.getElementById("PerimetroResultado");
-    
+
     const area = areaTriangulo(base,height);
     const perimetro = perimetroTriangulo(sideA,sideB,base);
+    
+    if(base <= 0 || height <= 0 || sideA <= 0 || sideB <= 0){
+        aResult.innerHTML = "Error";
+        pResult.innerHTML = "Error";
+    }else{
+        aResult.innerHTML = area.toFixed(2);
+        pResult.innerHTML = perimetro.toFixed(2);
+    }
 
-
-    aResult.innerHTML = area.toFixed(2);
-    pResult.innerHTML = perimetro.toFixed(2);
 }
