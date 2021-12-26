@@ -31,9 +31,15 @@ function calcularPerimetroCuadrado(){
     alert(`El perimetro cuadrado es: ${perimetro}`)
 }
 
-function calcularAreaCuadrado(){
+function calcularCuadrado(){
     const input = document.getElementById("InputCuadrado");
+    const AResult = document.getElementById("AreaResultado");
+    const PResult = document.getElementById("PerimetroResultado");
     const value = input.value;
     const area = areaCuadrado(value);
-    alert(`El area del cuadrado es: ${area}`)
+    const perimetro = perimetroCuadrado(value);
+
+
+    AResult.innerHTML = area;
+    PResult.innerHTML = perimetro;
 }

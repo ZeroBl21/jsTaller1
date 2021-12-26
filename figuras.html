@@ -10,41 +10,57 @@
         <!-- CSS -->
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
     </head>
     <body>
         <header>
-            <h1>Figuras Geométricas</h1>
+            <img class="logo" src="./assets/ZeroLogo.jpg" alt="Logo">
+            <nav class="nav">
+                <ul class="nav__links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="https://zerobl21.github.io/Portfolio/">Portfolio</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="https://github.com/ZeroBl21/RockPaperScissors">Repository</a>
         </header>
-
         <main>
-            <section class="form-container">
-                <div class="form-header"></div>
-                <div class="form-main">
-
-                    <h2>¡Vamos a calcular un Cuadrado!</h2>
-                    <p>Ingrese los datos requeridos en el formulario de debajo</p>
-                    
-                    <form action="">
-
-                        <label for="InputCuadrado">
-                            Escribe cuanto mide cada lado del cuadrado
-                        </label>
+            <div class="wrapper">
+                <section class="form-container">
+                    <div class="form-header">
+                        <a class="change-btn active"><img src="./assets/square-icon.png" alt="square"></a>
+                        <a class="change-btn"><img src="./assets/triangle-icon.png" alt="triangle"></a>
+                        <a class="change-btn"><img src="./assets/circle-icon.png" alt="circle"></a>
+                    </div>
+                    <div class="form-main">
+    
                         
-                        <input id="InputCuadrado" type="number">
-                        
-                        <button type="button" onclick="calcularPerimetroCuadrado()">
-                            Calcular Perímetro
-                        </button>
-                        
-                        <button type="button" onclick="calcularAreaCuadrado()">
-                            Calcular el área
-                        </button>
+                        <form>
+                            <h2 class="form-title">¡Vamos a calcular un Cuadrado!</h2>
+                            <p class="form-subtitle">Ingrese los datos requeridos en el formulario de debajo</p>
+    
+                            <label class="form-label" for="InputCuadrado">
+                                Lados
+                            </label>
+                            
+                            <input class="form-input" id="InputCuadrado" type="number">
+                            
+                            <button class="primary-btn" type="button" onclick="calcularCuadrado()">
+                                Calcular
+                            </button>
+    
+                        </form>
 
-                    </form> 
-                </div>
-                <div class="form-image"></div>
-            </section>
+                        <div class="form-image">
+                            <img src="./assets/square.svg" alt="square">
+                            <div class="form-result">
+                                Area: <span id="AreaResultado">0</span>cm^2<br>
+                                Perimetro: <span id="PerimetroResultado">0</span>cm<br>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <script src="figuras.js"></script>
